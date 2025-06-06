@@ -3,7 +3,7 @@ name: Tallest Towers
 agent:
   machine:
     type: a1-standard-4
-    os_image: macos-xcode15
+    os_image: macos-xcode12
 blocks:
   - name: Run tests
     task:
@@ -63,3 +63,6 @@ blocks:
             - xcrun simctl list
             - bundle exec fastlane screenshots
             - artifact push job screenshots
+promotions:
+  - name: Promotion 1
+    pipeline_file: pipeline_2.yml
